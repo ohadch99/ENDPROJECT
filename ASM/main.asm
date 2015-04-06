@@ -11,7 +11,7 @@ HeightPict   	dw 200
 LengthPict   	dw 0
 Handle       	dw 0 ;(a number to recognize the file)
 FileLength	dw ? 
-FileName     	db 'T.pcx', 0
+FileName     	db 'G.pcx', 0
 Buffer       	db 64000 dup(?) 
 Point_Fname  	dd FileName
 Point_Buffer 		dd Buffer
@@ -49,6 +49,10 @@ start:
 	int 10h
 ; --------------------------
 ; Your code here
+pic 
+mov ah,0Ch
+mov al,01h
+int 21h
 call PlayAndStopPROC
 call h
 call calculateHundredthSec

@@ -1,4 +1,4 @@
-proc PrintPictureProc
+PrintPictureProc:
 mov al, 02h				; read/write
    	lds dx, [Point_Fname]		; ASCIIZ File name
 								; load DS
@@ -104,4 +104,3 @@ L3:
 	jmp L1
 L4:
 ret
-endp PrintPictureProc
